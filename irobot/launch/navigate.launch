@@ -1,0 +1,8 @@
+<launch>
+  <include file="$(find irobot)/launch/lidar/$(env irobotLIDAR).launch" />
+  <arg name="map_file" default="$(find irobot)/maps/house.yaml"/>
+  <node pkg="map_server" name="map_server"  type="map_server" args="$(arg map_file)" />
+
+  <include file="$(find irobot)/launch/amcl.launch" />
+  <include file="$(find irobot)/param/navigation/move_base.xml" />
+</launch>

@@ -1,0 +1,3 @@
+<launch>
+  <include file="$(find irobot)/launch/lidar/$(env irobotLIDAR).launch" />
+</launch>
